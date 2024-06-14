@@ -12,7 +12,7 @@
 -  use AWS cloudformation to create stack on your template
 -  cloud formation constructs the stack in AWS
 # AWS cloudformation concepts
-1.template : is formates in text or json , that describe AWS infrastructure
+# 1.template : is formates in text or json , that describe AWS infrastructure
   - templates in cloudformation consists of nine mine objects:
       1. format version: format version defines the capability of template 
       2. Description: any comment 
@@ -37,9 +37,28 @@
   - using deletion policy , preserving and backing up of resource is possible when stack is deleted.
   - by default, AWS cloudformation deletes the resource and all its content if a resource has no deletion policy attribute in template
   - before deleting a resource, AWS cloudformation creates its snapshot
-  - 
-2.stack
-
+  -  " Retain Deletion policy" , if the resource have the deletion policy have the "Retain", when the stack is deleted, AWS cloud formation leaves the bucket without deleting
+# Depends on: 
+ - depends on attribute in a template, any user can define  the creation of specific resource followed by another resource
+# update policy: 
+  - with this attribute in AWS cloud formation,you can manage and replace the updates of the instances in auto scaling group 
+# 2.stack
+ - collection of AWS resource is called a stack and it can be manages in single unit
+ - cloud formation's templates define a stack in which the resource can be created ,deleted or updated in predictable way
+ - stack can have all resources that can be required to run a web application 
+   # Nested stacks:
+      - nested stacks  result a hirarchy of stacks
+      - using the cloud formation stack resource, a user can create nested stack with in another stack
+   # windows stack:
+      - windows stack gives you the ability to update and configure your own stack in windows instance
+      - with AWS cloud formation, you can create microsoft windows stack for amazon EC2 windows AMI
+  ## StackSet:
+  - using AWS cloudforamtion template, you can define  a stackset that lets you to create stack in AWS account the globe by using single template
+  - after stack set defined by you , updating or deleting the stack in target account  and regions are also can be  specified
+# cloudformation access control:
+  - IAM user: with IAM, cloud formation can have access control for user and ensure the only IAM user can create,update and delete stacks
+  - service role: on the users behalf, service role allow AWS cloudformation to make calls to resource in a stack
+  - stack policy: it is applied to all AWS  cloudformation users who attempt to update the stack. Here, you cannot include different users with differeent stack policies
 
 
 https://www.youtube.com/watch?v=uQdzcIf_KII&t=17519s
