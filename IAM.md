@@ -1,3 +1,8 @@
+IAM-- authentication and autherization
+- user -- who are authorized to aws account
+- -policies-- without policies user cannot do any thing.. policy is what user can do
+- group: create a group and assign user to that group instad of assigning rules to every user.
+- roles: temeporary user to access service from outside cloud or in between AWS accounts
 # AWS Securities:
 - cloud security is highest priority
 - compared to on-premises environment, AWS security provides a high level of data protection at low cost to its user
